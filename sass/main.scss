@@ -11,6 +11,11 @@ $main-bg-color: #F3F3F3;
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 h1, h2 {
     font-size: 24px;
     font-weight: 700;
@@ -26,6 +31,10 @@ section {
     flex-direction: column;
     padding: 40px 20px;
     gap: 18px;
+
+    @media (min-width: 1024px) {
+        padding: 40px 180px;
+    }
 }
 
 .button {
@@ -40,6 +49,16 @@ section {
     color: white;
     font-size: 16px;
     font-weight: 500;
+}
+.main-container {
+    width: 100%;
+    @media (min-width: 1024px) {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
 }
 
 /* Header */
@@ -127,14 +146,20 @@ footer {
 .info {
     &__cards {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         padding-top: 10px;
         gap: 18px;
+
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 
         .card {
             display: flex;
             flex-direction: row;
             align-items: center;
+            position: relative;
             padding-left: 10px;
 
             &__num {
@@ -144,7 +169,7 @@ footer {
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                left: 20px;
+                left: -5px;
                 border-radius: 100%;
                 background: $primary-color;
                 color: white;
@@ -155,12 +180,13 @@ footer {
             &__text {
                 width: 100%;
                 display: flex;
+                align-items: center;
                 border-radius: 20px;
                 background: $main-bg-color;
                 box-shadow: 0 4px 15px rgba(black, 0.15);
                 padding: 25px 0 25px 30px;
                 font-weight: 500;
-                gap: 20px;
+                gap: 30px;
 
                 & i {
                     color: #7E7E7E;
@@ -182,6 +208,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
 
         .card {
             height: 250px;
