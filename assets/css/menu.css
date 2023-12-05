@@ -1,0 +1,113 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .background-image {
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  position: absolute;
+}
+@media (min-width: 768px) {
+  main .background-image {
+    height: 55%;
+    object-position: 50% -175px;
+  }
+}
+@media (min-width: 1220px) {
+  main .background-image {
+    height: 400px;
+    object-position: 50% 60%;
+  }
+}
+
+.restaurant {
+  width: 100%;
+  margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background: #F3F3F3;
+  padding: 40px 15px;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .restaurant {
+    margin-top: 30%;
+    padding: 40px 150px;
+  }
+}
+@media (min-width: 1220px) {
+  .restaurant {
+    width: 1220px;
+    margin-top: 350px;
+    padding: 40px 250px;
+  }
+}
+.restaurant__nom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .restaurant__nom {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.restaurant__nom h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+.restaurant__nom i {
+  padding-right: 25px;
+}
+.restaurant__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.restaurant__menu--service {
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.restaurant__menu--plats {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 12px;
+}
+.restaurant__menu--plats .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px 15px;
+}
+.restaurant__menu--plats .card__text h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.restaurant__menu--plats .card__text p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.restaurant__menu--plats .card__prix {
+  font-size: 15px;
+  font-weight: 700;
+}
+.restaurant .button {
+  align-self: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}

@@ -6,7 +6,7 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 h1, h2 {
@@ -19,15 +19,25 @@ a {
   text-decoration: none;
 }
 
+.fa-heart {
+  color: #101010;
+  font-size: 24px;
+}
+
 section {
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
   gap: 18px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1020px) {
   section {
-    padding: 40px 180px;
+    padding: 40px 15%;
+  }
+}
+@media (min-width: 1440px) {
+  section {
+    padding: 40px 25%;
   }
 }
 
@@ -45,26 +55,27 @@ section {
   font-weight: 500;
 }
 
-.main-container {
-  width: 100%;
-}
-@media (min-width: 1024px) {
-  .main-container {
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-}
-
 /* Header */
 header nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   padding: 30px 0 15px 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  header nav {
+    padding: 30px 0;
+  }
+}
+header nav .back_button {
+  position: absolute;
+  left: 25px;
+}
+header nav .back_button .fa-arrow-left {
+  font-size: 24px;
 }
 header form {
   display: flex;
@@ -74,17 +85,18 @@ header form {
   color: #353535;
 }
 header form input {
-  width: 150px;
+  width: 175px;
   border: none;
   outline: none;
   text-align: center;
   background-color: #eaeaea;
   padding-left: 15px;
   color: #353535;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 }
 header form input::placeholder {
+  color: #353535;
   opacity: 1;
 }
 
@@ -93,7 +105,7 @@ footer {
   display: flex;
   flex-direction: column;
   background: #353535;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   color: white;
   gap: 15px;
 }
@@ -102,6 +114,7 @@ footer {
     height: 114px;
     flex-direction: row-reverse;
     align-items: flex-end;
+    padding: 0 20px 20px 0;
     gap: 100px;
   }
 }
@@ -125,7 +138,7 @@ footer .links__icon {
   display: flex;
 }
 footer .links__icon i {
-  width: 30px;
+  width: 25px;
 }
 footer .links__other {
   display: flex;
@@ -263,8 +276,4 @@ footer .links__other {
   padding-top: 2.5px;
   font-size: 17px;
   font-weight: 300;
-}
-.restaurants__cards .card__content i {
-  color: #101010;
-  font-size: 24px;
 }

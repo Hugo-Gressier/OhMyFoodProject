@@ -13,7 +13,7 @@ $main-bg-color: #F3F3F3;
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 h1, h2 {
@@ -26,14 +26,23 @@ a {
     text-decoration: none;
 }
 
+.fa-heart {
+    color: #101010;
+    font-size: 24px;
+}
+
 section {
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
     gap: 18px;
 
-    @media (min-width: 1024px) {
-        padding: 40px 180px;
+    @media (min-width: 1020px) {
+        padding: 40px 15%;
+    }
+
+    @media (min-width: 1440px) {
+        padding: 40px 25%;
     }
 }
 
@@ -50,25 +59,30 @@ section {
     font-size: 16px;
     font-weight: 500;
 }
-.main-container {
-    width: 100%;
-    @media (min-width: 1024px) {
-        width: 100%;
-        max-width: 1440px;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-}
 
 /* Header */
 header {
     nav {
         display: flex;
         justify-content: center;
+        align-items: center;
         position: relative;
         box-shadow: 0 2px 4px rgba(black, 0.15);
         padding: 30px 0 15px 0;
+        z-index: 1;
+
+        @media (min-width: 768px) {
+            padding: 30px 0;
+        }
+
+        .back_button {
+            position: absolute;
+            left: 25px;
+
+            .fa-arrow-left {
+                font-size: 24px;
+            }
+        }
     }
 
     form {
@@ -79,20 +93,23 @@ header {
         color: $grey;
 
         input {
-            width: 150px;
+            width: 175px;
             border: none;
             outline: none;
             text-align: center;
             background-color: darken($main-bg-color, 3.5%);
             padding-left: 15px;
             color: $grey;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
         }
 
         input::placeholder {
+            color: $grey;
             opacity: 1;
         }
+
+
     }
 }
 
@@ -101,7 +118,7 @@ footer {
     display: flex;
     flex-direction: column;
     background: $grey;
-    padding: 20px;
+    padding: 20px 0 20px 20px;
     color: white;
     gap: 15px;
 
@@ -109,6 +126,7 @@ footer {
         height: 114px;
         flex-direction: row-reverse;
         align-items: flex-end;
+        padding: 0 20px 20px 0;
         gap: 100px;
     }
 
@@ -132,7 +150,7 @@ footer {
             display: flex;
 
             i {
-                width: 30px;
+                width: 25px;
             }
         }
 
@@ -283,11 +301,6 @@ footer {
                     padding-top: 2.5px;
                     font-size: 17px;
                     font-weight: 300;
-                }
-
-                i {
-                    color: #101010;
-                    font-size: 24px;
                 }
             }
         }
