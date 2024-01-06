@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../assets/css/menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -28,98 +29,131 @@
 </header>
 
 <main>
-    <img class="background-image" src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+    <img class="background-image" src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt='Image du plat signature de "La note enchantée"'>
     <div class="restaurant">
         <div class="restaurant__nom">
             <h1>La note enchantée</h1>
-            <i class="fa-regular fa-heart"></i>
+            <div class="like">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
         </div>
-        <div class="restaurant__menu">
+        <div class="restaurant__menu entrees">
             <h2 class="restaurant__menu--service">ENTRÉES</h2>
             <div class="restaurant__menu--plats">
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Ravioles de foie gras</h3>
-                        <p>Accompagnées de leur crème à la truffe</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Ravioles de foie gras</h3>
+                            <p>Accompagnées de leur crème à la truffe</p>
+                        </div>
+                        <p class="plat__content--prix">25€</p>
                     </div>
-                    <p class="card__prix">25€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Caviar osciètre</h3>
-                        <p>Sur blini à la farine de blé noir</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Caviar osciètre</h3>
+                            <p>Sur blini à la farine de blé noir</p>
+                        </div>
+                        <p class="plat__content--prix">35€</p>
                     </div>
-                    <p class="card__prix">35€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Homard et espuma de potiron</h3>
-                        <p>Marinés aux zestes d'orange</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Homard et espuma de potiron</h3>
+                            <p>Marinés aux zestes d'orange</p>
+                        </div>
+                        <p class="plat__content--prix">20€</p>
                     </div>
-                    <p class="card__prix">20€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Foie gras de canard cuit entier</h3>
-                        <p>Confiture de figue et pain toasté</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Foie gras de canard cuit entier</h3>
+                            <p>Confiture de figue et pain toasté</p>
+                        </div>
+                        <p class="plat__content--prix">35€</p>
                     </div>
-                    <p class="card__prix">35€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
             </div>
         </div>
-        <div class="restaurant__menu">
+        <div class="restaurant__menu plats">
             <h2 class="restaurant__menu--service">PLATS</h2>
             <div class="restaurant__menu--plats">
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Noix de coquilles Saint-Jacques</h3>
-                        <p>Sur lit de purée de céleri-rave</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Noix de coquilles Saint-Jacques</h3>
+                            <p>Sur lit de purée de céleri-rave</p>
+                        </div>
+                        <p class="plat__content--prix">40€</p>
                     </div>
-                    <p class="card__prix">40€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Langoustine poêlée</h3>
-                        <p>Purée de patate douce</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Langoustine poêlée</h3>
+                            <p>Purée de patate douce</p>
+                        </div>
+                        <p class="plat__content--prix">35€</p>
                     </div>
-                    <p class="card__prix">35€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Mijoté de queue de bœuf</h3>
-                        <p>Et riz sauvage aux zestes de citron</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Mijoté de queue de bœuf</h3>
+                            <p>Et riz sauvage aux zestes de citron</p>
+                        </div>
+                        <p class="plat__content--prix">44€</p>
                     </div>
-                    <p class="card__prix">44€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
             </div>
         </div>
-        <div class="restaurant__menu">
+        <div class="restaurant__menu desserts">
             <h2 class="restaurant__menu--service">DESSERTS</h2>
             <div class="restaurant__menu--plats">
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Macaron noisette et chocolat</h3>
-                        <p>Glace au caramel brun et sel de Guérande</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Macaron noisette et chocolat</h3>
+                            <p>Glace au caramel brun et sel de Guérande</p>
+                        </div>
+                        <p class="plat__content--prix">18€</p>
                     </div>
-                    <p class="card__prix">18€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Baba au rhum revisité</h3>
-                        <p>Avec son coulis de citron</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Baba au rhum revisité</h3>
+                            <p>Avec son coulis de citron</p>
+                        </div>
+                        <p class="plat__content--prix">22€</p>
                     </div>
-                    <p class="card__prix">22€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
-                <article class="card">
-                    <div class="card__text">
-                        <h3>Tarte au citron meringuée</h3>
-                        <p>Déstructurée</p>
+                <article class="plat">
+                    <div class="plat__content">
+                        <div class="plat__content--text">
+                            <h3>Tarte au citron meringuée</h3>
+                            <p>Déstructurée</p>
+                        </div>
+                        <p class="plat__content--prix">23€</p>
                     </div>
-                    <p class="card__prix">23€</p>
+                    <i class="fa-solid fa-circle-check"></i>
                 </article>
             </div>
         </div>
-        <a class="button">Commander</a>
+        <a class="button button__menu">Commander</a>
     </div>
 </main>
 
@@ -136,7 +170,7 @@
         </a>
         <div class="links__other">
             <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
+            <a href="mailto:contact@ohmyfood-paris.com">Contact</a>
         </div>
     </div>
 </footer>

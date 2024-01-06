@@ -1,0 +1,186 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$linear-gradient: linear-gradient(175deg, $secondary-color, $primary-color);
+
+/****** Animations générales ******/
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disparition { 
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/****** Bouton ******/
+
+.button {
+    height: 50px;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(black, 0.25);
+    background: $linear-gradient;
+    padding: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition:
+        box-shadow 500ms,
+        filter 500ms;
+
+    &__menu {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    &:hover {
+        filter: brightness(115%);
+        box-shadow: 0 4px 15px rgba(black, 0.35);
+    }
+}
+
+/****** J'aime ******/
+
+.like {
+    position: relative;
+    width: 24px;
+
+    .fa-regular {
+        position: absolute;
+        color: #101010;
+        font-size: 24px;
+        transition: opacity 500ms;
+    }
+
+    .fa-solid {
+        opacity: 0;
+        background: $linear-gradient;
+        background-clip: text;
+        color: transparent;
+        font-size: 24px;
+        transition: opacity 500ms;
+    }
+
+    &:hover {
+        .fa-regular {
+            opacity: 0;
+        }
+        .fa-solid {
+            opacity: 1;
+        }
+    }
+}
+
+/****** Menu ******/
+
+.entrees, .plats, .desserts {
+    opacity: 0;
+    animation: apparition 750ms forwards;
+}
+
+.plats {
+    animation-delay: 500ms;
+}
+
+.desserts {
+    animation-delay: 1000ms;
+}
+
+/****** Coche ******/
+
+.plat {
+    position: relative;
+
+    i {
+        height: 100%;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -60px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background: $tertiary-color;
+        color: white;
+        font-size: 20px;
+        transition: right 500ms;
+    }
+
+    &:hover {
+        i {
+            right: 0;
+        }
+
+        .plat__content--text {
+            padding-right: 60px;
+        }
+
+        .plat__content--prix {
+            right: 60px;
+        }
+    }
+}
+
+/****** Loader ******/
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    background: $linear-gradient;
+    animation: loader 250ms 1s forwards;
+    
+    &__ohmyfood {
+        animation: disparition 250ms 750ms forwards;
+        font-size: 3em;
+        font-weight: 400;
+
+        &--oh, &--my, &--food {
+            font-family: 'Shrikhand', serif;
+            opacity: 0;
+            animation: apparition 250ms forwards;
+        }
+
+        &--my {
+            animation-delay: 250ms;
+        }
+    
+        &--food {
+            animation-delay: 500ms;
+        }
+    }
+}
+
+@keyframes loader {
+    from {
+        display: flex;
+    }
+
+    to {
+        opacity: 0;
+        height: 0;
+        display: none;
+    }
+}

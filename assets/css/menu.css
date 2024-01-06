@@ -1,50 +1,46 @@
+/****** Main ******/
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main .background-image {
+  height: 55%;
   width: 100%;
   display: flex;
-  object-fit: cover;
   position: absolute;
+  object-fit: cover;
+  object-position: 50% -150px;
 }
 @media (min-width: 768px) {
   main .background-image {
-    height: 55%;
-    object-position: 50% -175px;
-  }
-}
-@media (min-width: 1220px) {
-  main .background-image {
-    height: 400px;
     object-position: 50% 60%;
   }
 }
 
+/****** Restaurant menu ******/
 .restaurant {
   width: 100%;
-  margin-top: 50%;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  gap: 40px;
   position: relative;
+  box-sizing: border-box;
+  margin-top: 250px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background: #F3F3F3;
   padding: 40px 15px;
-  gap: 40px;
 }
 @media (min-width: 768px) {
   .restaurant {
-    margin-top: 30%;
+    margin-top: 350px;
     padding: 40px 150px;
   }
 }
 @media (min-width: 1220px) {
   .restaurant {
     width: 1220px;
-    margin-top: 350px;
     padding: 40px 250px;
   }
 }
@@ -64,9 +60,6 @@ main .background-image {
   font-size: 28px;
   font-weight: 400;
 }
-.restaurant__nom i {
-  padding-right: 25px;
-}
 .restaurant__menu {
   display: flex;
   flex-direction: column;
@@ -84,30 +77,57 @@ main .background-image {
   grid-template-rows: 1fr;
   gap: 12px;
 }
-.restaurant__menu--plats .card {
+
+/****** Plats ******/
+.plat {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: white;
+  overflow: hidden;
+}
+.plat__content {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: end;
-  border-radius: 20px;
-  background: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 15px 15px;
+  position: relative;
+  overflow: hidden;
 }
-.restaurant__menu--plats .card__text h3 {
+.plat__content--text {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 15px;
+  overflow: hidden;
+  transition: padding-right 500ms;
+}
+.plat__content--text h3, .plat__content--text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plat__content--text h3 {
   font-size: 18px;
   font-weight: 500;
 }
-.restaurant__menu--plats .card__text p {
+.plat__content--text p {
   font-size: 16px;
   font-weight: 300;
 }
-.restaurant__menu--plats .card__prix {
+.plat__content--prix {
+  display: flex;
+  flex: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  align-self: flex-end;
+  right: 0;
   font-size: 15px;
   font-weight: 700;
-}
-.restaurant .button {
-  align-self: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 15px;
+  transition: right 500ms;
 }
