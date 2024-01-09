@@ -15,6 +15,7 @@ main .background-image {
 @media (min-width: 768px) {
   main .background-image {
     object-position: 50% 60%;
+    height: 400px;
   }
 }
 

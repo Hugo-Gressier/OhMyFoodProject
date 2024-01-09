@@ -27,12 +27,12 @@ section {
 }
 @media (min-width: 1020px) {
   section {
-    padding: 40px 15%;
+    padding: 40px 10%;
   }
 }
 @media (min-width: 1440px) {
   section {
-    padding: 40px 25%;
+    padding: 40px 15%;
   }
 }
 
@@ -143,6 +143,11 @@ footer .links__other {
   font-size: 18px;
   font-weight: 300;
 }
+@media (min-width: 1024px) {
+  .intro h2 {
+    font-size: 40px;
+  }
+}
 
 /****** Information ******/
 .information__cards {
@@ -210,6 +215,11 @@ footer .links__other {
 @media (min-width: 768px) {
   .restaurants__cards {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurants__cards {
+    gap: 40px 100px;
   }
 }
 .restaurants__cards .card {

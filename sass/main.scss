@@ -34,11 +34,11 @@ section {
     gap: 18px;
 
     @media (min-width: 1020px) {
-        padding: 40px 15%;
+        padding: 40px 10%;
     }
-
+    
     @media (min-width: 1440px) {
-        padding: 40px 25%;
+        padding: 40px 15%;
     }
 }
 
@@ -160,6 +160,12 @@ footer {
         font-size: 18px;
         font-weight: 300;
     }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 40px;
+        }
+    }
 }
 
 /****** Information ******/
@@ -235,6 +241,10 @@ footer {
 
         @media (min-width: 768px) {
             grid-template-columns: 1fr 1fr;
+        }
+        
+        @media (min-width: 1440px) {
+            gap: 40px 100px;
         }
 
         .card {
